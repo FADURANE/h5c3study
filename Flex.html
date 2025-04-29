@@ -1,58 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<title>Flex 布局示例</title>
-<style>
-.container {
-width: 600px;
-margin: 50px auto;
-}
+<html>
+    <head>
+        <meta charset="UTF - 8">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border - box;
+            }
 
-.row {
-display: flex;
-height: 150px;
-}
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+                width: 800px;
+                margin: 0 auto;
+            }
 
-.row.top .box {
-flex: 1; /* 三等分 */
-}
+            .top-section {
+                display: flex;
+                flex: 1;
+            }
 
-.row.bottom .box-left {
-flex: 2; /* 占两份 */
-}
+            .top-left {
+                flex: 1;
+                background-color: rebeccapurple;
+            }
 
-.row.bottom .box-right {
-flex: 1; /* 占一份 */
-}
+            .top-middle {
+                flex: 2;
+                background-color: aqua;
+            }
 
-.box {
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 14px;
-color: #000;
-}
+            .top-right {
+                flex: 1;
+                background-color: rebeccapurple;
+            }
 
-.purple { background-color: purple; }
-.aqua { background-color: aqua; }
-.green { background-color: lightgreen; }
-.wheat { background-color: wheat; }
-</style>
-</head>
-<body>
+            .bottom-section {
+                display: flex;
+                flex: 1;
+            }
 
-<div class="container">
-<div class="row top">
-<div class="box purple"></div>
-<div class="box aqua"></div>
-<div class="box purple"></div>
-</div>
-<div class="row bottom">
-<div class="box box-left green">down left</div>
-<div class="box box-right wheat">down right</div>
-</div>
-</div>
+            .bottom-left {
+                flex: 2;
+                background-color: aquamarine;
+            }
 
-</body>
+            .bottom-right {
+                flex: 1;
+                background-color: antiquewhite;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="top-left">1</div>
+            <div class="top-middle">2</div>
+            <div class="top-right">3</div>
+            <div class="bottom-left">4</div>
+            <div class="bottom-right">5</div>
+        </div>
+    </body>
 </html>
