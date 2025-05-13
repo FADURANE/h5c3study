@@ -25,13 +25,26 @@
                 right: 0px;
             }
             .chargingbox{
-                width: 50px;
                 height: 22px;
-                background-color: green;
                 position: absolute;
                 top: 5px;
                 left: 5px;
                 border-radius: 5px;
+                animation-name: charging;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-delay: 2s;
+            }
+            @keyframes charging {
+                0% {
+                    width: 1px; 
+                    background-color: red; }
+                50% { 
+                    width: 25px;
+                    background-color: yellow; }
+                100% { 
+                    width: 50px;
+                    background-color: green; }
             }
         </style>
     </head>
