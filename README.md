@@ -1,2 +1,1 @@
 just study
-9ac76058c46af034120bce7654e5f30c
