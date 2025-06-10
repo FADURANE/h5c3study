@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>移动校园 - 登录</title>
+    <title>移动校园 - 注册</title>
     <style>
         /* 通用样式 */
         body {
@@ -22,8 +22,8 @@
             color: #4CAF50; /* 校园绿色 */
         }
 
-        /* 登录页面容器 */
-        .login-container {
+        /* 注册页面容器 */
+        .register-container {
             background: white;
             padding: 30px;
             border-radius: 10px;
@@ -65,25 +65,31 @@
 
         /* 响应式设计 */
         @media (max-width: 600px) {
-            .login-container {
+            .register-container {
                 width: 90%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>欢迎来到移动校园</h1>
-        <form action="/login" method="POST">
+    <div class="register-container">
+        <h1>创建账户</h1>
+        <form action="/register" method="POST">
             <label for="username">用户名</label>
             <input type="text" id="username" name="username" required>
+
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" required>
 
             <label for="password">密码</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">登录</button>
+            <label for="confirm-password">确认密码</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">注册</button>
         </form>
-        <p>没有账号？<a href="注册页.html">点击注册</a></p>
+        <p>已有账号？<a href="login.html">点击登录</a></p>
     </div>
 </body>
 </html>
