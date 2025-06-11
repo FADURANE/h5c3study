@@ -1,2 +1,1 @@
 just study
-1
